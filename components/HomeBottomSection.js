@@ -1,7 +1,10 @@
 import { View, Text, Pressable, Image, ScrollView, Dimensions } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeBottomSection = () => {
+
+    const navigation = useNavigation();
 
     const { width, height } = Dimensions.get('window');
 
@@ -18,7 +21,7 @@ const HomeBottomSection = () => {
         </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={[{marginTop: 20}]}>
-            <Pressable style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 10}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
+            <Pressable onPress={() => navigation.navigate('HouseDetails')} style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 50}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
                 <View style={[{height: 120}, {width: 120}, {borderRadius: 15}, {overflow: 'hidden'}]}>
                     <Image style={[{height: '100%'}, {width: '100%'}]} source={require('../assets/Villa.jpg')} />
                 </View>
@@ -52,7 +55,7 @@ const HomeBottomSection = () => {
                 </View>
             </Pressable>
 
-            <Pressable style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 10}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
+            <Pressable style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 50}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
                 <View style={[{height: 120}, {width: 120}, {borderRadius: 15}, {overflow: 'hidden'}]}>
                     <Image style={[{height: '100%'}, {width: '100%'}]} source={require('../assets/Villa.jpg')} />
                 </View>
@@ -86,7 +89,7 @@ const HomeBottomSection = () => {
                 </View>
             </Pressable>
 
-            <Pressable style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 10}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
+            <Pressable style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 50}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
                 <View style={[{height: 120}, {width: 120}, {borderRadius: 15}, {overflow: 'hidden'}]}>
                     <Image style={[{height: '100%'}, {width: '100%'}]} source={require('../assets/Villa.jpg')} />
                 </View>
@@ -120,7 +123,7 @@ const HomeBottomSection = () => {
                 </View>
             </Pressable>
 
-            <Pressable style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 10}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
+            <Pressable style={[{padding: 15}, {backgroundColor: '#fff'}, {borderRadius: 25}, {flexDirection: 'row'}, {elevation: 50}, {marginBottom: 50}, {marginLeft: 10}, {width: width / 1.13}, {marginRight: 5}]}>
                 <View style={[{height: 120}, {width: 120}, {borderRadius: 15}, {overflow: 'hidden'}]}>
                     <Image style={[{height: '100%'}, {width: '100%'}]} source={require('../assets/Villa.jpg')} />
                 </View>
