@@ -2,8 +2,11 @@ import { View, Text, Pressable, TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { useEffect, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeTopBar = () => {
+
+    const navigation = useNavigation();
 
     const [search, setSearch] = useState('San Francisco');
     const [showClearSearch, setShowClearSearch] = useState(false);
@@ -18,7 +21,7 @@ const HomeTopBar = () => {
 
   return (
     <View style={[{position: 'absolute'}, {top: 0}, {left: 0}, {right: 0}, {zIndex: 1000}, {flexDirection: 'row'}, {gap: 15}, {paddingTop: 50}, {paddingHorizontal: 10}]}>
-        <Pressable style={[{backgroundColor: '#fff'}, {height: 60}, {width: 60}, {borderRadius: 100 / 2}, {justifyContent: 'center'}, {alignItems: 'center'}, {elevation: 50}]}>
+        <Pressable onPress={() => navigation.navigate('AddHouse')} style={[{backgroundColor: '#fff'}, {height: 60}, {width: 60}, {borderRadius: 100 / 2}, {justifyContent: 'center'}, {alignItems: 'center'}, {elevation: 50}]}>
             <AntDesign name="user" size={24} color="black" />
         </Pressable>
         
